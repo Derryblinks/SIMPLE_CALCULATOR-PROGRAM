@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+    <style>
+      body {
+        background: url(images/grey.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        justify-content: center;
+        margin-top: 30px;
+        position: flex;
+      }
+      * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+
+      .wrap {
+        width: 400px;
+        margin: auto;
+        height: auto;
+        padding: 15px;
+        background: transparent;
+        backdrop-filter: blur(25px);
+        border-radius: 10px;
+        box-shadow: 5px;
+      }
+
+      input {
+        width: 89px;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.15s;
+      }
+      input:hover {
+        color: goldenrod;
+        border-style: solid;
+        font-size: 20px;
+        text-decoration: none;
+        border-color: gold;
+      }
+      input:active {
+        opacity: 0.15;
+      }
+
+      #del {
+        width: 100%;
+      }
+
+      #final_answer:hover {
+        background-color: rgb(57, 5, 245);
+        outline-color: none;
+        color: white;
+      }
+
+      /* This is the header css tyle I mean the buttons */
+      .header {
+        margin-top: 20px;
+        background-color: rgb(231, 222, 222);
+        border-style: solid;
+        border: none;
+        border-radius: 4px;
+        height: 30px;
+        width: 80px;
+        font-weight: bold;
+        margin: 10px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .header a {
+        text-decoration: none;
+      }
+
+      .header:hover {
+        color: white;
+        background-color: rgb(45, 103, 226);
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <header>
+        <a
+          href="file:///C:/Users/DERRICK%20BOATENG/Desktop/PROG%20BASIS/Login%20website/loginpage.html"
+        >
+          <button class="header">Home</button>
+        </a>
+        <button class="header">About</button>
+        <button class="header">Contact</button>
+      </header>
+    </center>
+    <div class="wrap">
+      <form name="cal">
+        <input
+          type="text"
+          name="display"
+          style="
+            width: auto;
+            width: 100%;
+            padding: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+          "
+        />
+        <br /><br />
+
+        <input type="button" value="9" onclick="cal.display.value+='9'" />
+        <input type="button" value="8" onclick="cal.display.value+='8'" />
+        <input type="button" value="7" onclick="cal.display.value+='7'" />
+        <input type="button" value="+" onclick="cal.display.value+='+'" />
+        <br />
+        <br />
+
+        <input type="button" value="6" onclick="cal.display.value+='6'" />
+        <input type="button" value="5" onclick="cal.display.value+='5'" />
+        <input type="button" value="4" onclick="cal.display.value+='4'" />
+        <input type="button" value="-" onclick="cal.display.value+='-'" />
+        <br />
+        <br />
+
+        <input type="button" value="3" onclick="cal.display.value+='3'" />
+        <input type="button" value="2" onclick="cal.display.value+='2'" />
+        <input type="button" value="1" onclick="cal.display.value+='1'" />
+        <input type="button" value="*" onclick="cal.display.value+='*'" />
+        <br />
+        <br />
+
+        <input type="button" value="0" onclick="cal.display.value+='0'" />
+        <input type="button" value="/" onclick="cal.display.value+='/'" />
+        <input type="button" value="%" onclick="cal.display.value+='%'" />
+        <input
+          type="button"
+          value="="
+          onclick="cal.display.value=eval(cal.display.value)"
+          id="final_answer"
+        />
+        <br />
+        <br />
+
+        <input
+          type="button"
+          value="DELETE"
+          onclick="cal.display.value = ''"
+          id="del"
+        />
+      </form>
+    </div>
+  </body>
+</html>
